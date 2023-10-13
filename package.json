@@ -1,0 +1,14 @@
+{
+  "name": "mbition",
+  "version": "1.0.0",
+  "description": "mbition challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Losmino13",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
