@@ -52,3 +52,4 @@ jobs:
         name: scan-image-report
         path: trivy-results.md
         retention-days: 7
+
