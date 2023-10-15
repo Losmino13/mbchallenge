@@ -1,0 +1,33 @@
+name: Tests on PR
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  unit_tests:
+    name: Lint and Unit testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run lint check
+        run: npm run lint
+
+      - name: Run node dependences check
+        run: npx better-npm-audit audit
+
+      - name: Run unit tests
+        run: npm test
