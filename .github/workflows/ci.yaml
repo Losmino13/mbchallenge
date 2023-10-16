@@ -76,6 +76,8 @@ jobs:
 
     - name: Build, tag, and push image to DockerHub
       id: build-image
+      env:
+        IMAGE_TAG: v${{ needs.version_bump.outputs.outputver }}
       run: |
         # Build a docker container and push it to dockerhub
         docker build -t $DOCKER_REPOSITORY/$SERVICE:$IMAGE_TAG .
