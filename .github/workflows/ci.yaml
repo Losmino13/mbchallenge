@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run jq script
-        run: ./scripts/make_csv.sh
+        run: ../scripts/make_csv.sh
       - name: Upload csv results to arifacts
         uses: actions/upload-artifact@v3
         with:
