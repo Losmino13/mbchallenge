@@ -95,10 +95,10 @@ jobs:
     name: Generate CSV file and archive it
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: run jq script
         run: |
-          pwd
-          ls -ltr
           chmod +x ./scripts/make_csv.sh
           ./scripts/make_csv.sh
       - name: Upload csv results to arifacts
