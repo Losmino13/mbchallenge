@@ -30,7 +30,6 @@ jobs:
     - name: Docker pull latest image
       id: pull-image
       env:
-        DOCKER_REPOSITORY: ${{ steps.login-dh.outputs.registry }}
         IMAGE_TAG: "latest"
       run: |
         docker pull $DOCKER_REPOSITORY/$SERVICE:$IMAGE_TAG
