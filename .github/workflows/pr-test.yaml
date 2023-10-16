@@ -29,5 +29,5 @@ jobs:
       - name: Run node dependences check
         run: npx better-npm-audit audit
 
-      - name: Run unit tests
+      - name: Run mocha tests
         run: CI=true npm test
