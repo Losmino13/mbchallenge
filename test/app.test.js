@@ -10,7 +10,7 @@ describe('GET /', () => {
     chai.request(app)
       .get('/')  // Replace with your actual route
       .end((err, res) => {
-        expect(res).to.have.status(400);
+        expect(res).to.have.status(200);
         done();
       });
   });
