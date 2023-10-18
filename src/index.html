@@ -65,8 +65,18 @@
             // Loop through the values and create table cells
             vals.forEach((elem) => {
                let td = document.createElement("td");
-               td.innerText = elem; // Set the value as the text of the table cell
-               tr.appendChild(td); // Append the table cell to the table row
+               console.log(elem)
+               if (elem.toString().includes('https')) {
+                 let img = document.createElement('img');
+                 img.src = elem;
+                 img.alt = 'Avatar';
+                 img.width = 50;
+                 //td.innerText = elem; // Set the value as the text of the table cell
+                 tr.appendChild(img); // Append the table cell to the table row
+               } else {
+                 td.innerText = elem; // Set the value as the text of the table cell
+                 tr.appendChild(td); // Append the table cell to the table row
+               }
             });
             table.appendChild(tr); // Append the table row to the table
          });
