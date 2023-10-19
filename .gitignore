@@ -132,3 +132,7 @@ dist
 
 # CSV out
 output*
+
+# Terraform
+infra/AWS/.terraform/*
+infra/AWS/.terraform*
