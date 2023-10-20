@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
+      source = "hashicorp/aws"
     }
     docker = {
       source = "kreuzwerker/docker"
@@ -11,7 +11,7 @@ terraform {
 
 ########################## Default region ##########################
 provider "aws" {
-  region  = "eu-central-1"
+  region                   = "eu-central-1"
   shared_credentials_files = ["/Users/milosmilisavljevic/.aws/credentials_mbition"]
 }
 
