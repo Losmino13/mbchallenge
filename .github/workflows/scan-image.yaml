@@ -52,3 +52,4 @@ jobs:
         path: trivy-results.md
         retention-days: 7
 
+
